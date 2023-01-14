@@ -1,0 +1,33 @@
+#infopersonal{
+    padding: 10px;
+    text-align: center;
+}
+
+/*estilo de nombre*/
+#nombre{
+    font-weight: bold;
+    margin-top: 20%;
+}
+
+/*estilo foto de perfil*/
+@media (min-width: 576px){
+    #fotodeperfil
+    {
+        position: absolute;
+        width: 15%;
+        border-radius: 100%;
+        left: 10%;
+        top:580px;
+    }
+    
+}
+@media (max-width: 575px){
+    #fotodeperfil
+    {
+        position: absolute;
+        width: 35%;
+        border-radius: 100%;
+        left: 33%;
+        top:800px;
+    }
+}

@@ -1,0 +1,83 @@
+{
+  "cv": [
+    {
+      "name": "Miguel Ernesto Lorente",
+      "title": "Full Stack Developer Jr",
+      "about": "Profesional responsable y eficiente en busca de un puesto en la empresa, aspiro a desplegar mis aptitudes y habilidades dentro de la empresa.",
+      "imgperfil": "/assets/img/perfil/perfil.jpg",
+      "imgbanner": "/assets/img/perfil/fondo3.jpg"
+    }
+  ],
+  "red": [
+    {
+      "img": "/assets/img/redes/github.png"
+    },
+    {
+      "img": "/assets/img/redes/linkedin.png"
+    },
+    {
+      "img": "assets/img/redes/facebook.png"
+    }
+  ],
+  "experience": [
+    {
+      "id": 1,
+      "img": "/assets/img/formación/teleperformance.png",
+      "cargo": "Representante de atención por redes sociales",
+      "description": "La tarea que tengo a cargo es brindar soporte técnico sobre servicios de cable, internet, telefonía fija y móvil, realizar ventas de productos intangibles, atención al cliente (facturación y administrativo) por medio de redes sociales Twitter, Facebook, Instagram y WhatsApp. Mi desempeño se mide con métricas (satisfacción y ventas), tenemos objetivos todos los meses.",
+      "start": "2016",
+      "end": "Actualidad"
+    },
+    {
+      "id": 2,
+      "img": "/assets/img/formación/teleperformance.png",
+      "cargo": "Representante de soporte técnico",
+      "description": "La tarea que tenía a cargo era brindar soporte técnico por contacto telefónico sobre servicios de cable, internet y telefonía. Mi desempeño fue medido con métricas y trabajábamos con objetivos muy altos. Tener trato cordial, empatía y saber escuchar antes de responder.",
+      "start": "2015",
+      "end": "2016"
+    },
+    {
+      "img": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Globant_Logo.svg",
+      "cargo": "Programador FullStack",
+      "description": "desarrollo de web fullstack",
+      "start": "2023",
+      "end": "2045",
+      "id": 3
+    }
+  ],
+  "education": [
+    {
+      "school": "Colegio Santa Rita",
+      "title": "Bachiller en Ciencias Naturales",
+      "img": "/assets/img/formación/csr.jpg",
+      "start": "2003",
+      "end": "2008"
+    }
+  ],
+  "skill": [
+    {
+      "img": "/assets/img/iconos/html.png",
+      "dificult": "50"
+    },
+    {
+      "img": "/assets/img/iconos/CSS.png",
+      "dificult": "50"
+    },
+    {
+      "img": "/assets/img/iconos/js.png",
+      "dificult": "50"
+    },
+    {
+      "img": "/assets/img/iconos/git.png",
+      "dificult": "20"
+    },
+    {
+      "img": "/assets/img/iconos/grupal.png",
+      "dificult": "20"
+    },
+    {
+      "img": "/assets/img/iconos/eng.png",
+      "dificult": "20"
+    }
+  ]
+}

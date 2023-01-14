@@ -1,0 +1,41 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #040e24; /*color de fondo del header*/
+    border-radius: 20px;
+}
+
+.redes {
+    margin-right: 0.5em;
+}
+
+#ApLogo {
+    width: 150px; /* ancho de logo argentina programa*/
+}
+
+#social {
+    width:50px;
+}
+
+.btn {
+    border-width: medium;
+}
+
+/*estilo para el celular*/
+@media (max-width: 575px) {
+    .header {
+        flex-direction: column;
+    }
+    
+    .redes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .redes img {
+        margin: 0.2em;
+    }
+}
+
