@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Educacion } from 'src/app/models/educacion';
 import { EducacionService } from 'src/app/service/educacion.service';
+import { ImageService } from 'src/app/service/image.service';
 
 @Component({
   selector: 'app-new-educacion',
@@ -11,14 +12,16 @@ import { EducacionService } from 'src/app/service/educacion.service';
 export class NewEducacionComponent implements OnInit {
   nombreE: string;
   descripcionE: string;
+  imgE: string;
 
-  constructor(private educacionS: EducacionService, private router: Router) { }
+  constructor(private educacionS: EducacionService, private router: Router, public imageService:ImageService) { }
 
   ngOnInit(): void {
   }
 
   onCreate():void{
-    const educacion = new Educacion(this.nombreE, this.descripcionE);
+    this.imgE = this.imageService.url;
+    const educacion = new Educacion(this.nombreE, this.descripcionE, this.imgE);
     this.educacionS.save(educacion).subscribe(
       data =>{
         alert("Educacion añadida correctamente");
@@ -28,5 +31,10 @@ export class NewEducacionComponent implements OnInit {
         this.router.navigate(['']);
       }
     )
+  }
+
+  uploadImage($event:any) {
+    const name = 'educacion';
+    this.imageService.uploadImage($event, name)
   }
 }

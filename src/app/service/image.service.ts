@@ -9,8 +9,9 @@ export class ImageService {
 
   constructor(private storage:Storage) { }
 
-  public uploadImage($event: any, name:string){
-    const file = $event.target.file[0];
+ public uploadImage($event: any, name:string){
+    const file = $event.target.files[0]
+    console.log(file);
     const imRef = ref(this.storage, `imagen/` + name)
     uploadBytes(imRef, file)
     .then(response => {this.getImages()})
@@ -18,11 +19,12 @@ export class ImageService {
   }
 
   getImages(){
-    const imagesRef = ref(this.storage, 'imagen');
+    const imagesRef= ref(this.storage, 'imagen')
     list(imagesRef)
     .then(async response => {
-      for (let item of response.items) {
+      for(let item of response.items){
         this.url = await getDownloadURL(item);
+        console.log("La url es: " + this.url);
       }
     })
     .catch(error => console.log(error))

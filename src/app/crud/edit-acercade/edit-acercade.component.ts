@@ -35,18 +35,19 @@ export class EditAcercadeComponent implements OnInit {
     this.persona.img = this.imageService.url
     this.personaS.update(id, this.persona).subscribe(
       data => {
+        alert("La persona se ha modificado correctamente");
         this.router.navigate(['']);
       }, err => {
-        alert("Error al modificar");
+        alert("Error al modificar la persona");
         this.router.navigate(['']);
       }
     )
   }
 
-  uploadImage($event: any){
-    const id=this.activatedRouter.snapshot.params['id'];
-    const name= "perfil_"+ id;
-    this.imageService.uploadImage($event, name)
+  uploadImage($event:any){
+    const id= this.activatedRouter.snapshot.params['id'];
+    const name = "perfil_" + id;
+    this.imageService.uploadImage($event, name);
   }
 
 }
