@@ -10,7 +10,7 @@
 }
 
 /*estilo foto de perfil*/
-@media (min-width: 576px){
+@media (min-width: 575px){
     #fotodeperfil
     {
         position: absolute;
@@ -21,13 +21,13 @@
     }
     
 }
-@media (max-width: 575px){
+@media (max-width: 576px){
     #fotodeperfil
     {
         position: absolute;
-        width: 35%;
+        width: 17%;
         border-radius: 100%;
-        left: 33%;
-        top:800px;
+        left: 42%;
+        top: 816px;;
     }
 }

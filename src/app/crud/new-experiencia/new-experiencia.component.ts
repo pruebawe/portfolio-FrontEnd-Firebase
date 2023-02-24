@@ -11,17 +11,21 @@ import { SExperienciaService } from 'src/app/service/s-experiencia.service';
 })
 export class NewExperienciaComponent implements OnInit {
  nombreE: string = '';
+ fechaIniE: string = '';
+ fechaFinE: string = '';
  descriptionE: string = '';
  imgE: string = '';
+
 
   constructor(private sExperiencia: SExperienciaService, private router:Router, public imageService: ImageService) { }
 
   ngOnInit(): void {
+    this.imageService.clearUrl();
   }
 
   onCreate():void {
     this.imgE = this.imageService.url;
-    const expe = new Experiencia(this.nombreE, this.descriptionE, this.imgE);
+    const expe = new Experiencia(this.nombreE, this.descriptionE, this.imgE, this.fechaIniE, this.fechaFinE);
     this.sExperiencia.save(expe).subscribe(
       data => {
         alert("Experiencia agregada");
@@ -34,8 +38,8 @@ export class NewExperienciaComponent implements OnInit {
   }
 
   uploadImage($event:any) {
-    const name = 'experiencia';
-    this.imageService.uploadImage($event, name)
+    const name = "img_exp"
+    this.imageService.uploadImage($event, name);
   }
 
 }

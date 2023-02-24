@@ -20,6 +20,9 @@ export class EditAcercadeComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
+
+    this.imageService.clearUrl();
+
     this.personaS.detail(id).subscribe(
       data => {
         this.persona = data;
@@ -32,7 +35,7 @@ export class EditAcercadeComponent implements OnInit {
 
   onUpdate(): void{
     const id = this.activatedRouter.snapshot.params['id'];
-    this.persona.img = this.imageService.url
+    this.persona.img = this.imageService.url;
     this.personaS.update(id, this.persona).subscribe(
       data => {
         alert("La persona se ha modificado correctamente");
@@ -45,8 +48,7 @@ export class EditAcercadeComponent implements OnInit {
   }
 
   uploadImage($event:any){
-    const id= this.activatedRouter.snapshot.params['id'];
-    const name = "perfil_" + id;
+    const name = "perfil"
     this.imageService.uploadImage($event, name);
   }
 
