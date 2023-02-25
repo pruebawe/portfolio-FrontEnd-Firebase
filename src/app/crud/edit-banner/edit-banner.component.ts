@@ -44,7 +44,7 @@ export class EditBannerComponent implements OnInit {
   }
 
   uploadImage($event:any){
-    const name = "perfil"
+    const name = "banner"
     this.imageService.uploadImage($event, name);
   }
 
