@@ -9,6 +9,7 @@ import { EditEducacionComponent } from './crud/edit-educacion/edit-educacion.com
 import { EditHabilidadComponent } from './crud/edit-habilidad/edit-habilidad.component';
 import { NewHabilidadComponent } from './crud/new-habilidad/new-habilidad.component';
 import { EditAcercadeComponent } from './crud/edit-acercade/edit-acercade.component';
+import { EditBannerComponent } from './crud/edit-banner/edit-banner.component';
 
 
 const routes: Routes = [
@@ -20,7 +21,8 @@ const routes: Routes = [
   {path:'editedu/:id', component: EditEducacionComponent},
   {path:'nuevahab', component: NewHabilidadComponent},
   {path:'edithab/:id', component: EditHabilidadComponent},
-  {path:'editacercade/:id', component: EditAcercadeComponent}
+  {path:'editacercade/:id', component: EditAcercadeComponent},
+  {path:'editbanner/:id', component: EditBannerComponent}
 ];
 
 @NgModule({

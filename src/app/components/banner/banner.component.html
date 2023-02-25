@@ -1,5 +1,10 @@
-<div class="container divs">
+<div class="container divs" *ngIf="Persona">
         <div class="row">
-            <img class="banner img-fluid">
+            <img src={{Persona.banner}} class="banner img-fluid">
+        </div>
+        <div>
+            <button type="button" class="btn btn-dark" routerLink="/editbanner/1" *ngIf="isLogged">
+                Actualizar banner
+            </button>
         </div>
 </div>
