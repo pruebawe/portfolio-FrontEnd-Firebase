@@ -1,20 +1,22 @@
 <div class="container divs" *ngIf="Persona">
     <div class="row" id="infopersonal">
-        <button type="button" class="btn btn-dark" routerLink="/editacercade/1" *ngIf="isLogged">
-        Actualizar Acerca de Mi
-        </button>
-        <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-            <img src={{Persona.img}} class="img-fluid" id="fotodeperfil">
-        </div>
-        <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-            <p id="nombre"> {{Persona.nombre}} {{Persona.apellido}}</p>
-            <p>Full Stack Developer Jr</p>
-        </div>
-        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-            <span>
-                <h1>Acerca de mí</h1>
-                <p>{{Persona.descripcion}}</p>
-            </span>
-        </div>
+            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                <img src={{Persona.img}} class="img-fluid" id="fotodeperfil">
+            </div>
+            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                <p id="nombre"> {{Persona.nombre}} {{Persona.apellido}}</p>
+                <p>{{Persona.titulo}}</p>
+            </div>
+                <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 position-relative">
+                <span>
+                    <h1>Acerca de mí</h1>
+                    <p>{{Persona.descripcion}}</p>
+                </span>
+                <div class="position-absolute top-0 end-0">
+                    <button type="button" class="btn btn-dark me-2" routerLink="/editacercade/1" *ngIf="isLogged">
+                        Actualizar Acerca de Mi
+                    </button>
+                </div>
+              </div>  
     </div>   
 </div>

@@ -1,10 +1,11 @@
 <div class="container divs" *ngIf="Persona">
-        <div class="row">
+        <div class="row position-relative">
             <img src={{Persona.banner}} class="banner img-fluid">
+            <div class="position-absolute top-0 end-0">
+                <button type="button" class="btn btn-dark me-2" routerLink="/editbanner/1" *ngIf="isLogged">
+                    Actualizar banner
+                </button>
         </div>
-        <div>
-            <button type="button" class="btn btn-dark" routerLink="/editbanner/1" *ngIf="isLogged">
-                Actualizar banner
-            </button>
         </div>
+        
 </div>

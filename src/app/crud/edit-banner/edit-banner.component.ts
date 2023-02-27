@@ -31,7 +31,7 @@ export class EditBannerComponent implements OnInit {
 
   onUpdate(): void{
     const id = this.activatedRouter.snapshot.params['id'];
-    this.persona.img = this.imageService.url;
+    this.persona.banner = this.imageService.url;
     this.personaS.update(id, this.persona).subscribe(
       data => {
         alert("La persona se ha modificado correctamente");

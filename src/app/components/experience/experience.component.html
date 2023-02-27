@@ -1,23 +1,32 @@
 <div class="container divs">
-    <h1>Experiencia Laboral</h1>
-    <button type="button" class="btn btn-dark" routerLink="/nuevaexpe" *ngIf="isLogged">
-        Nueva Experiencia
-    </button>
+    <div class="row position-relative">
+        <div class="col-sm-auto">
+            <h1>Experiencia Laboral</h1>
+        </div>
+        <div class="col-sm-4 mt-2">
+            <button type="button" class="btn btn-dark text-end" routerLink="/nuevaexpe" *ngIf="isLogged">
+                <i class="bi bi-plus-square"></i>
+            </button>
+        </div>
+    </div>
     <div class="row" id="experiencia" *ngFor="let Experiencia of expe">
         <div class="col-xs-1 col-sm-4 col-md-4 col-lg-2">
             <img src={{Experiencia.imgE}} class="img-fluid" id="fotodeperfil">
         </div>
         <div class="col-xs-1 col-sm-7 col-md-6 col-lg-9 offset-md-1">
-            <h2>{{Experiencia.nombreE}}</h2><h3>{{Experiencia.fechaIniE}} - {{Experiencia.fechaFinE}}</h3>
+            <div class="position-relative">
+                <h2>{{Experiencia.nombreE}}</h2>
+                <h3>{{Experiencia.fechaIniE}} - {{Experiencia.fechaFinE}}</h3>
                 <p>{{Experiencia.descriptionE}}</p>
-        </div>
-        <div class="col-xs-1 col-sm-1 col-md-2 col-lg-1">
-            <div><button class="btn btn-dark" routerLink="/editexp/{{Experiencia.id}}" *ngIf="isLogged">
-                <i class="bi bi-pencil-fill"></i>
-            </button></div>
-            <div><button class="btn btn-danger" (click)="delete(Experiencia.id)" *ngIf="isLogged">
-                <i class="bi bi-trash-fill"></i>
-            </button></div> 
+                <div class="position-absolute top-0 end-0">
+                    <button class="btn btn-dark me-2" routerLink="/editexp/{{Experiencia.id}}" *ngIf="isLogged">
+                        <i class="bi bi-pencil-fill"></i>
+                    </button>
+                    <button class="btn btn-danger" (click)="delete(Experiencia.id)" *ngIf="isLogged">
+                        <i class="bi bi-trash-fill"></i>
+                    </button>
+                </div>               
+            </div>    
         </div>  
     </div>
 </div>

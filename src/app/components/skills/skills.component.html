@@ -1,38 +1,41 @@
 <div class="container divs">
-    <h1>Hard & Soft</h1>
-    <div>
-      <button type="button" class="btn btn-dark" routerLink="/nuevahab" *ngIf="isLogged">
-        Nueva Habilidad
-    </button>
+    <div class="row position-relative">
+      <div class="col-sm-auto">
+        <h1>Hard & Soft</h1>
+      </div>
+      <div class="col-sm-4 mt-2">
+        <button type="button" class="btn btn-dark" routerLink="/nuevahab" *ngIf="isLogged">
+          <i class="bi bi-plus-square"></i>
+        </button>
+      </div>
     </div>
     <div class="row hys">
-    <div class="text-center col-xs-12 col-sm-4 col-md-4 col-lg-4" *ngFor="let habilidad of habilidad">
-    <circle-progress
-      [showImage]="false"  
-      [showTitle]="true"
-      [imageSrc]= "''"
-      [title]="(habilidad.nombre)"
-      [titleColor]="'#78C000'"
-      [imageWidth]="70"
-      [imageHeight]="70"
-      [percent]="(habilidad.porcentaje)"
-      [showUnits]="false"
-      [showSubtitle]="false"
-      [radius]="80"
-      [outerStrokeWidth]="14"
-      [innerStrokeWidth]="4"
-      [outerStrokeColor]="'#78C000'"
-      [innerStrokeColor]="'#0c0c24'"
-      [animation]="true"
-      [animationDuration]="500"
+      <div class="text-center col-xs-12 col-sm-4 col-md-4 col-lg-4" *ngFor="let habilidad of habilidad">
+      <circle-progress
+        [showImage]="false"  
+        [showTitle]="true"
+        [imageSrc]= "''"
+        [title]="(habilidad.nombre)"
+        [titleColor]="'#78C000'"
+        [imageWidth]="70"
+        [imageHeight]="70"
+        [percent]="(habilidad.porcentaje)"
+        [showUnits]="false"
+        [showSubtitle]="false"
+        [radius]="80"
+        [outerStrokeWidth]="14"
+        [innerStrokeWidth]="4"
+        [outerStrokeColor]="'#78C000'"
+        [innerStrokeColor]="'#0c0c24'"
+        [animation]="true"
+        [animationDuration]="500"
       ></circle-progress>
-
-<button class="btn btn-dark" routerLink="/edithab/{{habilidad.id}}" *ngIf="isLogged">
-  <i class="bi bi-pencil-fill"></i></button>
-
-<button class="btn btn-danger" (click)="delete(habilidad.id)" *ngIf="isLogged">
-    <i class="bi bi-trash-fill"></i></button>
-
-</div>
-</div>
+      <button class="btn btn-dark" routerLink="/edithab/{{habilidad.id}}" *ngIf="isLogged">
+        <i class="bi bi-pencil-fill"></i>
+      </button>
+      <button class="btn btn-danger" (click)="delete(habilidad.id)" *ngIf="isLogged">
+        <i class="bi bi-trash-fill"></i>
+      </button>
+    </div>
+  </div>
 </div>
