@@ -1,12 +1,33 @@
 <div class="container divs">
-    <h1>Proyectos</h1>
-    <div class="row proyecto">
+    <div class="row position-relative">
+        <div class="col-sm-auto">
+            <h1>Proyectos</h1>
+        </div>
+        <div class="col-sm-4 mt-2">
+            <button type="button" class="btn btn-dark text-end" routerLink="/nuevoproy" *ngIf="isLogged">
+                <i class="bi bi-plus-square"></i>
+            </button>
+        </div>
+    </div>
+    <div class="row proyecto" *ngFor="let Proyecto of proyecto">
         <div class="col-sm-12 col-md-6 col-lg-6 parte1">
-            <h3>Porfolio CV</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi aut laboriosam eos minus itaque cupiditate mollitia quibusdam corporis dignissimos tempore eligendi dolores quis voluptate fuga officia, vitae molestiae doloremque sed?</p>
+            <div class="position-relative">
+                <h3>{{Proyecto.nombre}}</h3>
+                <h3>{{Proyecto.fecha}}</h3>
+                <p>{{Proyecto.descripcion}}</p>
+                <h3>{{Proyecto.url}}</h3>
+                <div class="position-absolute top-0 end-0">
+                    <button class="btn btn-dark me-2" routerLink="/editproy/{{Proyecto.id}}" *ngIf="isLogged">
+                        <i class="bi bi-pencil-fill"></i>
+                    </button>
+                    <button class="btn btn-danger" (click)="delete(Proyecto.id)" *ngIf="isLogged">
+                        <i class="bi bi-trash-fill"></i>
+                    </button>
+                </div>
+            </div>
         </div>
         <div class="col-sm-12 col-md-4 col-lg-4 offset-md-1 offset-lg-1 parte2">
-                <img src="../../../assets/img/proyectos/fondo de pantalla.jpg" class="img-fluid img-proyecto">
+                <img src={{Proyecto.imgProy}} class="img-fluid img-proyecto">
         </div>
     </div>
 </div>

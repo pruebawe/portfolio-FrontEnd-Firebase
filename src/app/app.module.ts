@@ -28,6 +28,8 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { EditBannerComponent } from './crud/edit-banner/edit-banner.component';
+import { NewProyectoComponent } from './crud/new-proyecto/new-proyecto.component';
+import { EditProyectoComponent } from './crud/edit-proyecto/edit-proyecto.component';
 
 
 
@@ -52,6 +54,8 @@ import { EditBannerComponent } from './crud/edit-banner/edit-banner.component';
     EditHabilidadComponent,
     EditAcercadeComponent,
     EditBannerComponent,
+    NewProyectoComponent,
+    EditProyectoComponent,
   ],
   imports: [
     BrowserModule,
